@@ -1,5 +1,7 @@
 from flask import Blueprint
 from flask_restful import Api
+
+from resources.Category import CategoryResource
 from resources.Hello import Hello
 
 
@@ -9,3 +11,4 @@ api = Api(api_bp)
 
 # Add Route to Hello Class
 api.add_resource(Hello, '/Hello')
+api.add_resource(CategoryResource, '/Category')
